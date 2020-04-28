@@ -1,32 +1,20 @@
+import { v1 as uuidv1 } from 'uuid'
 let tasks = []
-let counter = 0
 
 export const addTask = (desc) => {
     if (desc === '') {
-        console.log('ne');
-        
-    }
-    counter++
-    for(let task of tasks){
-        if(counter === task.id){
-            counter++
-        }
+        return
     }
 
     let tmp = {
-        id: counter,
+        id: uuidv1,
         desc: desc,
-        done: false
     }
     tasks.push(tmp)
-    console.log('da');
-    
 }
 
 export const removeTask = (id) => {
-    let index
-    
-    index = tasks.findIndex((task) => {
+    let index = tasks.findIndex((task) => {
         return task.id === id
     }) 
     tasks.splice(index,1)

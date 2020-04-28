@@ -1,9 +1,14 @@
 import { TaskForm } from '../components/TaskForm'
 import { TaskList } from '../components/TaskList'
 
-export const Main = () => {
-    const main = document.createElement('main')
+const main = document.createElement('main')
 
-    main.append(TaskForm(), TaskList())
+export const Main = () => {
+    main.appendChild(TaskForm())
+    main.appendChild(TaskList())
     return main
+}
+
+export const renderTaskList = () => {
+    main.replaceChild(TaskList(), document.querySelector('#tasks-container'))
 }
