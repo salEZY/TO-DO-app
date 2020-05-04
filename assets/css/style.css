@@ -10,7 +10,7 @@ body {
     0 -6px white,        
     0 6px white,          
     6px 0 6px -1px grey,  
-    -1px 0 1px -1px gray;
+    -1px 0 1.5px -1px gray;
 }
 header, footer {
     background-color: cadetblue;
