@@ -2,10 +2,15 @@ body {
     margin: 0;
   }
 #container {
-    width: 55%;
+    width: 60%;
     margin: 0 auto;
     min-height: 100vh;
     position: relative;
+    box-shadow: 
+    0 -6px white,        
+    0 6px white,          
+    6px 0 6px -1px grey,  
+    -1px 0 1px -1px gray;
 }
 header, footer {
     background-color: cadetblue;
@@ -18,29 +23,38 @@ h2, h4 {
 header {
     margin-bottom: 50px;
 }
+#log, #reg {
+    margin-right: 15px;
+}
 .btn {
     border: 1px solid white;
     border-radius: 2px;
     padding: 5px;
     margin-top: 5px;
-    background-color: aliceblue;
-    color: cadetblue
+    background-color: cadetblue;
+    color: aliceblue
 }
 .btn:hover {
     cursor: pointer;
-    background-color: cadetblue;
-    color: aliceblue;
+    background-color: aliceblue;
+    color: cadetblue;
 }
-#app main div label {
+#task-form{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly;
+}
+#task-form label {
     margin-top: 5px;
     font-weight: bolder;
     font-size: 20px;
 }
-#app main div input {
+#task-form input {
     border: 2px solid cadetblue;
     border-radius: 4px;
 }
 #addTask {
+    color: cadetblue;
     background-color: white;
     border: 2px solid cadetblue;
     font-size: 16px;
@@ -57,31 +71,29 @@ header {
 }
 .title-list {
     font-size: 60px;
-    color: cadetblue;
+    color: #5f9ea0;
     text-align: center;
     text-shadow: 2px 2px 0px whitesmoke, 3px 3px 0px cadetblue;
 }
 .task-item {
     display: flex;
     flex-direction: row;
-    width: 33.33%;
+    justify-content: space-between;
+    width: 80%;
     margin: 20px auto;
     overflow: auto;
-    position: relative;
     box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.15);
     padding: 5px;
 }
 .remove-btn {
     height: 26px;
-    position: absolute;
-    left: 93.5%;
-    bottom: 60%;
     color: darkred;
     background-color: white;
     font-weight: bolder;
     text-align: center;
     font-size: 16px;
     border-radius: 5px;
+    margin-top: 0;
 }
 .remove-btn:hover {
     color: white;
@@ -91,4 +103,22 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+    background-color: #a0785f;
+  }
+
+  @media only screen and (max-width: 767px) {
+      .task-item {
+          width: 90%;
+      }
+      .remove-btn{
+          left: 94.5%;
+      }
+      #task-form {
+          flex-direction: column;
+          text-align: center;
+      }
+      #task-form input, #task-form button {
+          width: 50%;
+          margin: 10px auto;
+      }
   }
