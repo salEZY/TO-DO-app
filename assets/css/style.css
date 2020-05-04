@@ -26,6 +26,18 @@ header {
 #log, #reg {
     margin-right: 15px;
 }
+.git {
+    margin: 18px 20px; 
+    text-decoration: none; 
+    color: #a0785f; 
+    font-family: impact; 
+    font-size: 20px;
+    font-weight: bolder; 
+    text-shadow: 2px 1px white;
+}
+.git:hover {
+    color: cadetblue
+}
 .btn {
     border: 1px solid white;
     border-radius: 2px;
