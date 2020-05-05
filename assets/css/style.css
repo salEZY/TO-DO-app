@@ -17,6 +17,9 @@ header, footer {
     color: aliceblue;
     font-style: oblique;
 }
+li {
+    list-style: none;
+}
 h2, h4 {
     margin-left: 10px;
 }
@@ -29,11 +32,11 @@ header {
 .git {
     margin: 18px 20px; 
     text-decoration: none; 
-    color: #a0785f; 
+    color: white; 
     font-family: impact; 
     font-size: 20px;
-    font-weight: bolder; 
-    text-shadow: 2px 1px white;
+    letter-spacing: 2px; 
+    font-style: normal;
 }
 .git:hover {
     color: cadetblue
@@ -118,6 +121,9 @@ footer {
   }
 
   @media only screen and (max-width: 767px) {
+      #container {
+          width: 90%;
+      }
       .task-item {
           width: 90%;
       }

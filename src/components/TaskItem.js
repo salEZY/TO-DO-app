@@ -8,7 +8,9 @@ export const TaskItem = (task) => {
 
     const x = document.createElement('button')
     x.className = 'remove-btn btn'
-    x.textContent = 'X'
+    const deleteIcon = document.createElement('i')
+    deleteIcon.className = 'fas fa-trash'
+    x.appendChild(deleteIcon)
     x.addEventListener('click',() => {
         removeTask(task.id)
         div.remove()

@@ -12,13 +12,21 @@ export const TaskForm = () => {
     input.placeholder = 'Task Name'
     input.id = 'desc'
     const span = document.createElement('span')
-    span.textContent = 'No task description!'
+    span.textContent = 'No task description'
+    const warning = document.createElement('i')
+    warning.className = 'fas fa-exclamation-triangle'
+    warning.style.marginLeft = '2px'
+    span.appendChild(warning)
     span.style = 'display: none; padding-top: 7.5px; color: darkred;font-weight: bolder;font-size: 18px;'
     const submitBtn = document.createElement('button')
     submitBtn.type = 'submit'
     submitBtn.id = 'addTask'
     submitBtn.className = 'btn'
     submitBtn.textContent = 'Add'
+    const addIcon = document.createElement('i')
+    addIcon.className = "fas fa-plus"
+    addIcon.style.marginLeft = '5px'
+    submitBtn.appendChild(addIcon)
     submitBtn.addEventListener('click', () => {
         if (input.value === '') {
             span.style.display = 'block'
@@ -29,6 +37,7 @@ export const TaskForm = () => {
         addTask(input.value)
         renderTaskList()
     })
+    
 
     div.append(label, input, span, submitBtn)
     return div
