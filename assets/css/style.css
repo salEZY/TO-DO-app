@@ -65,7 +65,7 @@ header {
 }
 #task-form input {
     border: 2px solid cadetblue;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 #addTask {
     color: cadetblue;
@@ -137,5 +137,11 @@ footer {
       #task-form input, #task-form button {
           width: 50%;
           margin: 10px auto;
+      }
+  }
+
+  @media only screen and (max-width: 325px) {
+      body {
+          display: none;
       }
   }
