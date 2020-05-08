@@ -30,6 +30,7 @@ export const checkTask = (id) => {
         }
     }
     tasks[index].done = !tasks[index].done
+    console.log(tasks[index].done)
 }
 
 

@@ -126,7 +126,7 @@ header {
     background-color: cadetblue;
 }
 .check-label:hover #customCheck {
-    background-color: #ccc;
+    background-color: #a9cbcc;
 }
 .check-label input:checked + #customCheck:after {
     content: "";
