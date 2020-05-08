@@ -5,7 +5,7 @@ export const TaskItem = (task) => {
     div.className = 'task-item'
     const p = document.createElement('p')
     p.textContent = task.desc
-    p.style = 'margin-left: 10px; font-size: 20px;'
+    p.className = 'task-desc'
     const inputDiv = document.createElement('div')
     inputDiv.style = 'display: flex; flex-direction: row; align-items: center;'
     const checkLbl = document.createElement('label')
@@ -14,7 +14,8 @@ export const TaskItem = (task) => {
     checkLbl.textContent = 'Done?'
     checkLbl.addEventListener('click', ()=> {
         checkTask(task.id)
-        p.style.textDecoration = 'line-through cadetblue'
+        p.style.textDecoration = 'line-through'
+        p.style.opacity = '0.4'
     })
     const check = document.createElement('input')
     check.id = 'check'
