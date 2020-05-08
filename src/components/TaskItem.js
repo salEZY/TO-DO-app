@@ -12,10 +12,15 @@ export const TaskItem = (task) => {
     checkLbl.className = 'check-label'
     checkLbl.htmlFor = 'check'
     checkLbl.textContent = 'Done?'
-    checkLbl.addEventListener('click', ()=> {
-        checkTask(task.id)
-        p.style.textDecoration = 'line-through'
-        p.style.opacity = '0.4'
+    checkLbl.addEventListener('change', (e)=> {
+        if (e.target.checked) {
+            checkTask(task.id)
+            p.style.textDecoration = 'line-through'
+            p.style.opacity = '0.4'
+        }else{
+            p.style.textDecoration = 'none'
+            p.style.opacity = '1'
+        }      
     })
     const check = document.createElement('input')
     check.id = 'check'

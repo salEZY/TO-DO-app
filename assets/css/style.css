@@ -100,7 +100,7 @@ header {
 .task-desc {
     margin-left: 10px; 
     font-size: 20px;
-    transition: opacity 1.5s ease, text-decoration 1.5s ease;
+    transition: opacity 1.2s ease, text-decoration 1.2s ease;
 }
 .task-item label, .task-item input, .task-item button {
     margin: 10px 10px;
