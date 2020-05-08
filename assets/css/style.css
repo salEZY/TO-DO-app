@@ -28,6 +28,7 @@ header {
 }
 #log, #reg {
     margin-right: 15px;
+    border: 2px solid white;
 }
 .git {
     margin: 18px 20px; 
@@ -90,24 +91,64 @@ header {
     text-shadow: 2px 2px 0px whitesmoke, 3px 3px 0px cadetblue;
 }
 .task-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 80%;
     margin: 20px auto;
     overflow: auto;
     box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.15);
     padding: 5px;
 }
+.task-item label, .task-item input, .task-item button {
+    margin: 10px 10px;
+}
+.check-label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    padding-right: 30px;
+    user-select: none;
+}
+.check-label #check {
+    display: none;
+}
+.check-label #customCheck {
+    display: inline-block;
+    position: absolute;
+    left: 40;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #eee;
+    margin-left: 10px;
+}
+.check-label input:checked + #customCheck {
+    background-color: cadetblue;
+}
+.check-label:hover #customCheck {
+    background-color: #ccc;
+}
+.check-label input:checked + #customCheck:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 9px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
 .remove-btn {
     height: 26px;
-    color: darkred;
+    width: 26px;
+    color: #ba110c;
     background-color: white;
     font-weight: bolder;
     text-align: center;
     font-size: 16px;
     border-radius: 5px;
-    margin-top: 0;
+    padding: 0;
 }
 .remove-btn:hover {
     color: white;
