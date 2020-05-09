@@ -1,4 +1,5 @@
 import { displayMain } from '../layouts/Main'
+import { hideIntro } from '../components/Intro'
 
 export const Nav = () => {
     const ul = document.createElement('ul')
@@ -9,6 +10,7 @@ export const Nav = () => {
     loginBtn.className = 'btn'
     loginBtn.textContent = 'Login'
     loginBtn.addEventListener('click', () => {
+        hideIntro(true)
         loginBtn.style.display = 'none'
         registerBtn.style.display = 'block'
         displayMain(true)
@@ -23,8 +25,8 @@ export const Nav = () => {
     registerBtn.id = 'reg'
     registerBtn.className = 'btn'
     registerBtn.textContent = 'Logout'
-    registerBtn.addEventListener('click', () => {
-        
+    registerBtn.addEventListener('click', () => {  
+        hideIntro(false)   
         loginBtn.style.display = 'block'
         registerBtn.style.display = 'none'
         displayMain(false)

@@ -2,6 +2,7 @@ export const Footer = () => {
     const footer = document.createElement('footer')
     footer.style = 'display: flex; flex-direction: row; justify-content: space-between'
     const h4 = document.createElement('h4')
+    h4.style.paddingTop = '10px'
     h4.textContent = `Copyright \u00A9 2020`
     const git = document.createElement('a')
     git.className = 'git'
