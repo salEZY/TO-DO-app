@@ -1,6 +1,10 @@
 body {
     margin: 0;
   }
+
+  main {
+      padding-bottom: 60px;
+  }
 #container {
     width: 60%;
     margin: 0 auto;
@@ -100,7 +104,8 @@ header {
 .task-desc {
     margin-left: 10px; 
     font-size: 20px;
-    transition: opacity 1.2s ease, text-decoration 1.2s ease;
+    font-family: Arial Black,Arial Bold,Gadget,sans-serif; 
+    transition: opacity 1.5s ease, text-decoration 1.5s ease;
 }
 .task-item label, .task-item input, .task-item button {
     margin: 10px 10px;
@@ -161,6 +166,7 @@ header {
 }
 footer {
     position: absolute;
+    left: 0;
     bottom: 0;
     width: 100%;
     background-color: #a0785f;

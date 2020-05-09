@@ -1,4 +1,5 @@
 import { removeTask, checkTask } from "../utility/utility"
+let count = 1
 
 export const TaskItem = (task) => {
     const div = document.createElement('div')
@@ -10,11 +11,24 @@ export const TaskItem = (task) => {
     inputDiv.style = 'display: flex; flex-direction: row; align-items: center;'
     const checkLbl = document.createElement('label')
     checkLbl.className = 'check-label'
-    checkLbl.htmlFor = 'check'
+    checkLbl.htmlFor = 'check'+count
     checkLbl.textContent = 'Done?'
-    checkLbl.addEventListener('change', (e)=> {
+    const check = document.createElement('input')
+    check.id = 'check'+count++
+    check.style.display = 'none'
+    check.type = 'checkbox'
+    check.checked = task.done
+    if (check.checked) {
+        p.style.textDecoration = 'line-through'
+        p.style.opacity = '0.4'
+    }else{
+        p.style.textDecoration = 'none'
+        p.style.opacity = '1'
+    }
+    checkLbl.addEventListener('change', (e) => {
         if (e.target.checked) {
             checkTask(task.id)
+            // console.log(task.id)
             p.style.textDecoration = 'line-through'
             p.style.opacity = '0.4'
         }else{
@@ -22,9 +36,6 @@ export const TaskItem = (task) => {
             p.style.opacity = '1'
         }      
     })
-    const check = document.createElement('input')
-    check.id = 'check'
-    check.type = 'checkbox'
     const customSpan = document.createElement('span')
     customSpan.id = 'customCheck'
     checkLbl.append(check, customSpan)

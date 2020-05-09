@@ -7,7 +7,7 @@ export const addTask = (desc) => {
     }
 
     let tmp = {
-        id: uuidv1,
+        id: uuidv1(),
         desc: desc,
         done: false
     }
@@ -30,8 +30,6 @@ export const checkTask = (id) => {
         }
     }
     tasks[index].done = !tasks[index].done
-    console.log(tasks[index].done)
 }
-
 
 export { tasks }
