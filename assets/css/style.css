@@ -1,10 +1,9 @@
 body {
     margin: 0;
-  }
-
+}
   main {
-      padding-bottom: 60px;
-  }
+    padding-bottom: 60px;
+}
 #container {
     width: 60%;
     margin: 0 auto;
