@@ -21,14 +21,10 @@ export const TaskItem = (task) => {
     if (check.checked) {
         p.style.textDecoration = 'line-through'
         p.style.opacity = '0.4'
-    }else{
-        p.style.textDecoration = 'none'
-        p.style.opacity = '1'
     }
     checkLbl.addEventListener('change', (e) => {
         if (e.target.checked) {
             checkTask(task.id)
-            // console.log(task.id)
             p.style.textDecoration = 'line-through'
             p.style.opacity = '0.4'
         }else{
@@ -39,13 +35,13 @@ export const TaskItem = (task) => {
     const customSpan = document.createElement('span')
     customSpan.id = 'customCheck'
     checkLbl.append(check, customSpan)
-    const x = document.createElement('button')
-    x.className = 'remove-btn btn'
-    x.id = 'del'
     const deleteLbl = document.createElement('label')
-    deleteLbl.htmlFor = 'del'
+    deleteLbl.htmlFor = 'del'+count
     deleteLbl.textContent = 'Delete'
     deleteLbl.style.fontSize = '20px'
+    const x = document.createElement('button')
+    x.className = 'remove-btn btn'
+    x.id = 'del'+count++
     const deleteIcon = document.createElement('i')
     deleteIcon.className = 'fas fa-trash'
     x.appendChild(deleteIcon)
