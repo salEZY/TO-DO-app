@@ -129,7 +129,7 @@ h2, h4 {
     width: 20px;
     height: 20px;
     border-radius: 4px;
-    background-color: #eee;
+    background-color: #d6d6d6;
     margin-left: 10px;
 }
 .check-label input:checked + #customCheck {
@@ -179,6 +179,7 @@ footer {
       text-align: center;
       background-color: black;
       margin: 0 auto;
+      padding-top: 40px;
   }
   .intro-section p, .intro-section span {
       color: cadetblue;
