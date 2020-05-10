@@ -28,14 +28,15 @@ export const TaskForm = () => {
     addIcon.style.marginLeft = '5px'
     submitBtn.appendChild(addIcon)
     submitBtn.addEventListener('click', () => {
-        if (input.value === '') {
+        if (input.value.trim() !== '') {
+            addTask(input.value)
+            renderTaskList()
+        }else{
             span.style.display = 'block'
             setTimeout(() => {
                 span.style.display = 'none'
             },3000)
         }
-        addTask(input.value)
-        renderTaskList()
     })
     
 

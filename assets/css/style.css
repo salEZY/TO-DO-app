@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    color: cadetblue
 }
   main {
     padding-bottom: 60px;
@@ -14,11 +15,14 @@ body {
     0 6px white,          
     10px 0 10px -1px grey,  
     -2px 0 2px -2px gray;
+    background-color: black;
 }
 header, footer {
-    background-color: cadetblue;
-    color: aliceblue;
+    color: cadetblue;
     font-style: oblique;
+}
+header {
+    border-bottom: 3px solid cadetblue;
 }
 li {
     list-style: none;
@@ -28,35 +32,39 @@ h2, h4 {
 }
 #log, #reg {
     margin-right: 15px;
-    border: 2px solid white;
 }
 .git {
-    margin: 18px 20px; 
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 10px; 
     text-decoration: none; 
-    color: white; 
+    color: cadetblue; 
     font-family: impact; 
     font-size: 20px;
     letter-spacing: 2px; 
     font-style: normal;
-    border: 2px solid aliceblue;
     padding: 5px;
+    transition: color 0.5s ease-in, text-shadow 0.5s ease-in;
 }
 .git:hover {
-    color: cadetblue;
-    background-color: aliceblue;
+    color: black;
+    text-shadow: 2px 2px 0 cadetblue;
 }
 .btn {
-    border: 1px solid white;
-    border-radius: 2px;
+    font-weight: bolder;
+    outline: 0;
+    border: 2px solid cadetblue;
+    border-radius: 3px;
     padding: 5px;
     margin-top: 5px;
-    background-color: cadetblue;
-    color: aliceblue
+    background-color: black;
+    color: cadetblue;
+    transition: color 1s ease, background-color 1s ease;
 }
 .btn:hover {
     cursor: pointer;
-    background-color: aliceblue;
-    color: cadetblue;
+    background-color: cadetblue;
+    color: black;
 }
 #task-form{
     display: flex; 
@@ -71,19 +79,14 @@ h2, h4 {
 #task-form input {
     border: 2px solid cadetblue;
     border-radius: 2px;
+    background-color: black;
+    color: white;
 }
 #addTask {
-    color: cadetblue;
-    background-color: white;
-    border: 2px solid cadetblue;
     font-size: 16px;
     font-weight: bolder;
-    padding: 6px;
+    padding: 5px;
     margin-top: 0;
-}
-#addTask:hover {
-    background-color: cadetblue;
-    color: white;
 }
 #reg {
     display: none;
@@ -98,10 +101,12 @@ h2, h4 {
     width: 80%;
     margin: 20px auto;
     overflow: auto;
-    box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 0px 5px 3px gainsboro;
     padding: 5px;
+    border-radius: 2px;
 }
 .task-desc {
+    color: white;
     margin-left: 10px; 
     font-size: 20px;
     font-family: Arial Black,Arial Bold,Gadget,sans-serif; 
@@ -153,29 +158,32 @@ h2, h4 {
     height: 26px;
     width: 26px;
     color: #ba110c;
-    background-color: white;
     font-weight: bolder;
     text-align: center;
     font-size: 16px;
     border-radius: 5px;
     padding: 0;
+    border: 0;
 }
 .remove-btn:hover {
-    color: white;
-    background-color: darkred;
+    background-color: #ba110c;
 }
 footer {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: cadetblue;
-    color: aliceblue;
+    color: cadetblue;
+    border-top: 3px solid cadetblue;
+  }
+  footer h4 {
+      margin-bottom: 0;
+      margin-top: 10px;
   }
   .intro-section {
       display: flex;
       width: 100%;
-      height: 90vh;
+      height: 85vh;
       text-align: center;
       background-color: black;
       margin: 0 auto;
