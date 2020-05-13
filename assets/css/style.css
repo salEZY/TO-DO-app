@@ -3,7 +3,13 @@ body {
     color: cadetblue
 }
   main {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
+}
+#myCanvas {
+    display: block;
+    width: 90%;
+    height: 500px;
+    margin: 20px auto;
 }
 #container {
     width: 60%;
@@ -70,7 +76,7 @@ h2, h4 {
     display: flex; 
     flex-direction: row; 
     justify-content: space-evenly;
-    margin-top: 40px;
+    padding-top: 40px;
 }
 #task-form label {
     margin-top: 5px;
@@ -181,29 +187,13 @@ footer {
       margin-top: 10px;
   }
   .intro-section {
-      display: flex;
       width: 100%;
       height: 87vh;
       text-align: center;
       background-color: black;
       margin: 0 auto;
   }
-  .intro-section p, .intro-section span {
-      color: cadetblue;
-  }
-  .intro-section p {
-      font-size: 60px;
-      margin: auto;
-  }
-  .intro-section span {
-      font-size: 20px;
-      position: absolute;
-      bottom: 40%;
-      left: 45%;
-  }
-  canvas {
-      width: 100%;
-  }
+
   @media only screen and (max-width: 767px) {
       #container {
           width: 90%;
