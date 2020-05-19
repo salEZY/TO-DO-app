@@ -101,7 +101,7 @@ h2, h4 {
     font-size: 60px;
     color: #5f9ea0;
     text-align: center;
-    text-shadow: 2px 2px 0px whitesmoke, 3px 3px 0px cadetblue;
+    text-shadow:  2px 2px 3px white;
 }
 .task-item {
     width: 80%;
