@@ -34,7 +34,7 @@
     "url": ""
   },
   "dependencies": {
-    "copy-webpack-plugin": "^5.1.1",
+    "copy-webpack-plugin": "^6.0.3",
     "uuid": "^7.0.3"
   }
 }
